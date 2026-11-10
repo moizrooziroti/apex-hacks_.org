@@ -1,8 +1,9 @@
 import fs from 'node:fs';
 import path from 'node:path';
+import { distImagesDir } from './lib/dist-root.mjs';
 
 /** Drop source PNGs from dist — pages serve WebP variants only. */
-const distImages = path.resolve('dist/images');
+const distImages = distImagesDir();
 let removed = 0;
 let bytes = 0;
 

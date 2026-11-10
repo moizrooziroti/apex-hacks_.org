@@ -1,0 +1,9 @@
+# Pure static Astro site (no @astrojs/cloudflare adapter).
+# Prevents Wrangler auto-config from re-running `astro add cloudflare` on deploy.
+name = "apex-hacks-org"
+compatibility_date = "2024-11-11"
+
+[assets]
+directory = "./dist"
+not_found_handling = "404-page"
+html_handling = "force-trailing-slash"

@@ -1,8 +1,8 @@
 import fs from 'node:fs';
 import path from 'node:path';
+import { getDistRoot } from './lib/dist-root.mjs';
 
-const root = process.cwd();
-const dist = path.join(root, 'dist');
+const dist = getDistRoot();
 const key = process.env.INDEXNOW_KEY?.trim();
 const host = process.env.INDEXNOW_HOST?.trim() || 'apex-hacks.org';
 
